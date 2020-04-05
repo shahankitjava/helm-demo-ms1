@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo-ms1-pod
+  labels:
+    app: arc-demo-ms1
+    component: arc-component
+spec:
+  containers:
+    - name: demo-ms1
+      image: us.icr.io/ct-ticketing/demo-ms1:v1
+      ports:
+        - containerPort: 7777 
+  imagePullSecrets:
+    - name: helm-us-icr-io
