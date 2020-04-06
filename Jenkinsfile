@@ -24,7 +24,7 @@ pipeline {
                 script {
                     HelmInstall(
                         name: "Hello World!",
-                        KUBE_CONTEXT_NAME:"C4E-Pipeline-Templates/3cdf9bdadce442ac9f9abea7a72da7a9",
+                        KUBE_CONTEXT_NAME:null,
                         KUBE_CLUSTER_NAME:"C4E-Pipeline-Templates/3cdf9bdadce442ac9f9abea7a72da7a9",
                         KUBE_NAMESPACE:"helm-test"
                     )
