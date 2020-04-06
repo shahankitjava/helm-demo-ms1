@@ -12,7 +12,7 @@ public class HelmController {
     public @ResponseBody
     HelmResponse greet(@PathVariable String id) {
         HelmResponse helmResponse = new HelmResponse();
-        helmResponse.setWelcome("Hello : " + id);
+        helmResponse.setWelcome("Helm Demo MS 1 : " + id);
         return helmResponse;
     }
 }
