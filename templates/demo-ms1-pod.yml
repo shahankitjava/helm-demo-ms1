@@ -12,4 +12,4 @@ spec:
       ports:
         - containerPort: 7777 
   imagePullSecrets:
-    - name: helm-us-icr-io
+    - name: default-us-icr-io
