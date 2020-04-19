@@ -20,3 +20,5 @@ spec:
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 7777
+      imagePullSecrets:
+      - name: default-us-icr-io
