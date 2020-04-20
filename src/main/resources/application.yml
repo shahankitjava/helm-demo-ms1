@@ -1,2 +1,4 @@
 server:
   port: 7777
+helm2:
+  url: http://localhost:8888/helm2/CallFromHelm1
