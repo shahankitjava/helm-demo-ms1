@@ -1,24 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: demo-ms-deployment
+  name: helm-demo-ms1-deployment
+  namespace: helm-test
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
-      app: arc-demo-ms1
       component: arc-component
+      app: helm-demo-ms1
   template:
     metadata:
       labels:
-        app: arc-demo-ms1
+        app: helm-demo-ms1
         component: arc-component
     spec:
       containers:
-      - name: demo-ms1-pod
+      - name: helm-demo-ms1-container
         image: us.icr.io/ct-ticketing/demo-ms1:v1
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 7777
       imagePullSecrets:
-      - name: default-us-icr-io
+        - name: default-us-icr-io
