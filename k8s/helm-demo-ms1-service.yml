@@ -5,10 +5,6 @@ metadata:
   namespace: helm-test
 spec:
   type: ClusterIP
-  ports:
-  - port: 80
-    targetPort: 7777
-    protocol: TCP
   selector:
     app: helm-demo-ms1
     component: arc-component
