@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helm-demo-ms3-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: helm-demo-ms3
+      component: arc-component
+  template:
+    metadata:
+      labels:
+        app: helm-demo-ms3
+        component: arc-component
+    spec:
+      containers:
+      - name: helm-demo-ms3-container
+        image: us.icr.io/ct-ticketing/demo-ms3:v1
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 9999
+      imagePullSecrets:
+        - name: default-us-icr-io
