@@ -1,5 +1,8 @@
 package com.aa.helm.helmdemoms1;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,6 +21,14 @@ public class HelmController {
     public @ResponseBody HelmResponse greet(@PathVariable String id) {
         HelmResponse helmResponse = new HelmResponse();
         helmResponse.setWelcome("Helm Demo MS 1 : " + id);
+        List<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        for (Integer integer : list) {
+            System.out.println(integer);
+        }
         return helmResponse;
     }
 
