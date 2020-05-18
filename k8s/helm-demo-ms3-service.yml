@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: helm-demo-ms3-service
+  namespace: helm-test
+spec:
+  type: ClusterIP
+  selector:
+    app: helm-demo-ms3
+    component: arc-component
+  ports:
+  - port: 9999
+    targetPort: 9999
