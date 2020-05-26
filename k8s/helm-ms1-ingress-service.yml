@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: helm-demo-ms1
+  namespace: helm-test
+spec:
+  rules:
+    - host: helm-test-helm-demo-ms1.c4e-pipeline-templates.us-south.containers.appdomain.cloud
+    - http:
+        paths:
+          - path: /
+            backend:
+                serviceName: helm-demo-ms1-service
+                servicePort: 7777
+  tls:
+    - hosts:
+        - helm-test-helm-demo-ms1.c4e-pipeline-templates.us-south.containers.appdomain.cloud
+      secretName: c4e-pipeline-templates.us-south.containers.appdomain.cloud
