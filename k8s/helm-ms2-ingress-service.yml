@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: helm-demo-ms2
+  namespace: helm-test
+spec:
+  rules:
+    - host: helm-test-helm-demo-ms2.C4E-Pipeline-Templates-3cdf9bdadce442ac9f9abea7a72da7a9-0000.us-south.containers.appdomain.cloud
+    - http:
+        paths:
+          - path: /helm2
+            backend:
+                serviceName: helm-demo-ms2-service
+                servicePort: 8888
+          - path: /callHelm3
+            backend:
+                serviceName: helm-demo-ms2-service
+                servicePort: 8888
