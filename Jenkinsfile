@@ -27,6 +27,7 @@ pipeline {
                         KUBE_CONTEXT_NAME:"C4E-Pipeline-Templates/3cdf9bdadce442ac9f9abea7a72da7a9",
                         KUBE_CLUSTER_NAME:"C4E-Pipeline-Templates/3cdf9bdadce442ac9f9abea7a72da7a9",
                         KUBE_NAMESPACE:"helm-test",
+                        KUBE_USER: "ankit.shah@aa.com/67eaa4b4b0b80862fab45beb6b22f002",
                         IBM_REGION: "us-south",
                         RESOURCE_GROUP: "BUY-resgrp",
                         API_KEY: "0qJFm2tHzGyqD6KY1FV5QUVS4Tttd1P34V1RitHHx_dQ"
