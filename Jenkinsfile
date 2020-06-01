@@ -24,8 +24,9 @@ pipeline {
                 script {
                     HelmInstall(
                         name: "Hello World!",
-                        KUBE_CONTEXT_NAME:"3cdf9bdadce442ac9f9abea7a72da7a9",
-                        KUBE_CLUSTER_NAME:"3cdf9bdadce442ac9f9abea7a72da7a9",
+                        KUBECLUSTER_ID:"3cdf9bdadce442ac9f9abea7a72da7a9",
+                        KUBE_CONTEXT_NAME:"C4E-Pipeline-Templates/3cdf9bdadce442ac9f9abea7a72da7a9",
+                        KUBE_CLUSTER_NAME:"C4E-Pipeline-Templates/3cdf9bdadce442ac9f9abea7a72da7a9",
                         KUBE_NAMESPACE:"helm-test",
                         KUBE_USER: "ankit.shah@aa.com/67eaa4b4b0b80862fab45beb6b22f002",
                         IBM_REGION: "us-south",
