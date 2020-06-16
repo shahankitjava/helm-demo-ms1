@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: helm-demo-ms3
+  namespace: helm-test
+spec:
+  rules:
+    - host: helm-test-helm-demo-ms3.c4e-pipeline-templates.us-south.containers.appdomain.cloud
+    - http:
+        paths:
+          - path: /
+            backend:
+                serviceName: helm-demo-ms3-service
+                servicePort: 9999
+  tls:
+    - hosts:
+        - helm-test-helm-demo-ms3.c4e-pipeline-templates.us-south.containers.appdomain.cloud
+      secretName: c4e-pipeline-templates.us-south.containers.appdomain.cloud
