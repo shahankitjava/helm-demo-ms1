@@ -9,5 +9,5 @@ spec:
     app: helm-demo-ms3
     component: arc-component
   ports:
-  - port: 9999
+  - port: 80
     targetPort: 9999

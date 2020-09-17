@@ -4,7 +4,7 @@ metadata:
   name: helm-demo-ms3-deployment
   namespace: helm-test
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: helm-demo-ms3
@@ -17,16 +17,16 @@ spec:
     spec:
       containers:
       - name: helm-demo-ms3-container
-        image: us.icr.io/ct-ticketing/demo-ms3:v1
+        image: shahankitturn/demo-ms3:v1
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9999
         resources:
             requests:
               memory: "64Mi"
-              cpu: "128m"
+              cpu: "64m"
             limits:
-              memory: "128Mi"
-              cpu: "256m"
+              memory: "64Mi"
+              cpu: "64m"
       imagePullSecrets:
         - name: default-us-icr-io

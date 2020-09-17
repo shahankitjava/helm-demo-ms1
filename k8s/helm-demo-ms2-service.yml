@@ -9,5 +9,5 @@ spec:
     app: helm-demo-ms2
     component: arc-component
   ports:
-   - port: 8888
+   - port: 80
      targetPort: 8888
