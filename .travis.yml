@@ -1,0 +1,12 @@
+language: java
+
+services:
+  - docker
+
+script:
+  - mvn install package
+
+after_success:
+  - docker build -t shahankitturn/demo-ms1:v1 .
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - docker push shahankitturn/demo-ms1:v1
