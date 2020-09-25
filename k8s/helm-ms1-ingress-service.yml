@@ -1,20 +1,18 @@
-apiVersion: extensions/v1beta1
-kind: Ingress
-metadata:
-  name: helm-demo-ms1
-  annotations:
-    kubernetes.io/ingress.class : nginx
-  namespace: helm-test
-spec:
-  rules:
-    - host: c4e-pipeline-templates.us-south.containers.appdomain.cloud
-    - http:
-        paths:
-          - path: /helm-ms1
-            backend:
-                serviceName: helm-demo-ms1-service
-                servicePort: 80
-  tls:
-    - hosts:
-        - c4e-pipeline-templates.us-south.containers.appdomain.cloud
-      secretName: c4e-pipeline-templates
+#apiVersion: networking.k8s.io/v1
+#kind: Ingress
+#metadata:
+#  name: helm-demo-ms1
+#  annotations:
+#    kubernetes.io/ingress.class : nginx
+#    nginx.ingress.kubernetes.io/rewrite-target: /
+#  namespace: helm-test
+#spec:
+#  rules:
+#    - http:
+#        paths:
+#          - path: /
+#            backend:
+#              service:
+#                name: helm-demo-ms1-service
+#                port:
+#                  number: 80

@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: helm-demo-ms1-container
-        image: shahankitturn/demo-ms1:v1
+        image: shahankitturn/demo-ms1
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 7777
@@ -28,5 +28,3 @@ spec:
             limits:
               memory: "64Mi"
               cpu: "64m"
-      imagePullSecrets:
-        - name: default-us-icr-io
