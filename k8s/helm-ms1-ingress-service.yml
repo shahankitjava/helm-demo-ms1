@@ -1,4 +1,4 @@
-apiVersion: networking.k8s.io/v1
+apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: helm-demo-ms1
@@ -12,7 +12,5 @@ spec:
         paths:
           - path: /
             backend:
-              service:
-                name: helm-demo-ms1-service
-                port:
-                  number: 80
+              serviceName: helm-demo-ms1-service
+              servicePort: 80
