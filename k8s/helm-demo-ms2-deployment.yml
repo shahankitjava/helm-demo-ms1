@@ -4,7 +4,7 @@ metadata:
   name: helm-demo-ms2-deployment
   namespace: default
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: helm-demo-ms2
