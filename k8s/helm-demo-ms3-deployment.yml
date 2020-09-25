@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: helm-demo-ms3-deployment
-  namespace: helm-test
+  namespace: default
 spec:
   replicas: 2
   selector:
