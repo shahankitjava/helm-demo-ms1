@@ -16,6 +16,7 @@ public class HelmController {
     @GetMapping(value = "/helm1")
     public @ResponseBody
     HelmResponse greet() {
+        System.out.println("===== Method greet of helm-demo-ms1 called. =====");
         HelmResponse helmResponse = new HelmResponse();
         helmResponse.setWelcome("Welcome from helm-demo-ms1");
         return helmResponse;
@@ -24,6 +25,7 @@ public class HelmController {
     @GetMapping(value = "/helm1/callHelm2")
     public @ResponseBody
     HelmResponse greetHelm2() {
+        System.out.println("===== Method greetHelm2 of helm-demo-ms1 called. =====");
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<HelmResponse> response = restTemplate.getForEntity(helm2Url, HelmResponse.class);
         return response.getBody();
