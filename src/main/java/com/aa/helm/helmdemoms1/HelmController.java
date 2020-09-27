@@ -13,7 +13,7 @@ public class HelmController {
     @Value("${helm2.url}")
     private String helm2Url;
 
-    @GetMapping(value = "/")
+    @GetMapping(value = "/helm1")
     public @ResponseBody
     HelmResponse greet() {
         HelmResponse helmResponse = new HelmResponse();

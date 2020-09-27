@@ -16,12 +16,12 @@ spec:
         component: arc-component
     spec:
       containers:
-      - name: helm-demo-ms1-container
-        image: shahankitturn/demo-ms1
-        imagePullPolicy: IfNotPresent
-        ports:
-        - containerPort: 7777
-        resources:
+        - name: helm-demo-ms1-container
+          image: shahankitturn/demo-ms1
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 7777
+          resources:
             requests:
               memory: "256Mi"
               cpu: "256m"
