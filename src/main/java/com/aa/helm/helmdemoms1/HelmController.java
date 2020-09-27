@@ -21,7 +21,7 @@ public class HelmController {
         return helmResponse;
     }
 
-    @GetMapping(value = "/callHelm2")
+    @GetMapping(value = "/helm1/callHelm2")
     public @ResponseBody
     HelmResponse greetHelm2() {
         RestTemplate restTemplate = new RestTemplate();
